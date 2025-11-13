@@ -28,5 +28,5 @@ export class CreateAnnouncementDto {
   })
   @IsUrl()
   @IsOptional()
-  avatarUrl: string;
+  avatarUrl?: string;
 }
