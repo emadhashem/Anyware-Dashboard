@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: anyware-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: anyware
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  api:
+    build:
+      context: ./apps/api # <--- Context is now the api folder
+      dockerfile: Dockerfile
+    container_name: anyware-api
+    depends_on:
+      - mongo
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      DATABASE_URL: mongodb://root:password@mongo:27017/anyware?authSource=admin
+
+  web:
+    build:
+      context: ./apps/web # <--- Context is now the web folder
+      dockerfile: Dockerfile
+      args:
+        - VITE_BACKEND_URL=http://localhost:3000
+    container_name: anyware-web
+    depends_on:
+      - api
+    ports:
+      - "5173:5173"
+
+volumes:
+  mongo_data:
