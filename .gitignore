@@ -1,0 +1,81 @@
+# --------------------------------------
+# 🚀 Core Node / PNPM / Turbo Monorepo
+# --------------------------------------
+
+# dependencies
+node_modules/
+.pnpm-store/
+
+# turbo build cache
+.turbo/
+out/
+
+# environment
+.env
+.env.*.local
+.env.local
+.envrc
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+logs/
+*.log
+
+# system files
+.DS_Store
+Thumbs.db
+
+# editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# dist / build output
+dist/
+build/
+.next/
+out/
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# lock files (if not using them per project)
+# remove this line if you want to commit lockfiles
+pnpm-lock.yaml
+
+# misc
+*.local
+*.tmp
+*.bak
+
+# Mac system files
+__MACOSX/
+
+# --------------------------------------
+# ⚙️ Apps
+# --------------------------------------
+
+# React (Vite)
+apps/web/.vite/
+apps/web/dist/
+apps/web/.env
+apps/web/.env.local
+
+# NestJS
+apps/api/dist/
+apps/api/.env
+apps/api/.env.local
+
+# --------------------------------------
+# 🧩 Packages
+# --------------------------------------
+
+packages/*/dist/
+packages/*/.env
+packages/*/.env.local

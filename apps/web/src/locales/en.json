@@ -1,0 +1,35 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "schedule": "Schedule",
+    "courses": "Courses",
+    "gradebook": "Gradebook",
+    "performance": "Performance",
+    "announcement": "Announcement",
+    "logout": "Logout"
+  },
+  "header": {
+    "welcome": "Welcome {{name}},",
+    "searchPlaceholder": "Search..."
+  },
+  "dashboard": {
+    "examsTitle": "EXAMS TIME",
+    "examsDesc": "Here we are. Are you ready to fight? Don't worry, we prepared some tips to be ready for your exams.",
+    "examsQuote": "Nothing happens until something moves",
+    "viewTips": "View exams tips",
+    "announcements": "Announcements",
+    "whatsDue": "What's due",
+    "all": "All"
+  },
+  "common": {
+    "backToDashboard": "Back to Dashboard",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "quizzes": {
+    "title": "All Quizzes & Assignments"
+  },
+  "announcements": {
+    "title": "All Announcements"
+  }
+}
