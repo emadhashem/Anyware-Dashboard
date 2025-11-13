@@ -22,7 +22,6 @@ function AnnouncementCard({ announcement }: TProps) {
       key={announcement._id}
       className="flex flex-col lg:flex-row gap-4 items-start"
     >
-      {/* Left: Author */}
       <div className="flex items-center gap-3 w-full md:w-2/6">
         <Avatar className="h-12 w-12">
           <AvatarImage src={announcement.avatarUrl} />
@@ -44,7 +43,6 @@ function AnnouncementCard({ announcement }: TProps) {
         </div>
       </div>
 
-      {/* Right: Content */}
       <div className="w-full md:w-4/6 flex flex-col text-sm text-muted-foreground leading-normal">
         <p>
           {displayText}

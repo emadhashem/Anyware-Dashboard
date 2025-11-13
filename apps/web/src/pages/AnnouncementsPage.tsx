@@ -13,10 +13,10 @@ import { useGetAllAnnouncements } from "@/api/announcements/announcements.hooks"
 import AnnouncementSkeleton from "@/components/app/announcements/AnnouncementSkeleton";
 import AnnouncementCard from "@/components/app/announcements/AnnouncementCard";
 import CustomPagination from "@/components/app/CustomPagination";
-import { useTranslation } from "react-i18next"; // Import hook
+import { useTranslation } from "react-i18next"; 
 
 export default function AnnouncementsPage() {
-  const { t } = useTranslation(); // Initialize hook
+  const { t } = useTranslation();
   const [page, setPage] = useState(1);
   const { data, isPending } = useGetAllAnnouncements(page, 10);
   const announcements = data?.data || [];

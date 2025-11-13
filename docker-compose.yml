@@ -16,7 +16,7 @@ services:
 
   api:
     build:
-      context: ./apps/api # <--- Context is now the api folder
+      context: ./apps/api
       dockerfile: Dockerfile
     container_name: anyware-api
     depends_on:
@@ -29,7 +29,7 @@ services:
 
   web:
     build:
-      context: ./apps/web # <--- Context is now the web folder
+      context: ./apps/web
       dockerfile: Dockerfile
       args:
         - VITE_BACKEND_URL=http://localhost:3000

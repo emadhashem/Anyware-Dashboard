@@ -12,7 +12,6 @@ import { NavLink } from "react-router-dom";
 import { useAuthStore } from "@/zustand/auth.store";
 import { useTranslation } from "react-i18next";
 
-// Reusable content for both Desktop Sidebar and Mobile Sheet
 export function SidebarContent() {
   const { logout } = useAuthStore();
   const { t } = useTranslation();
@@ -22,7 +21,6 @@ export function SidebarContent() {
   const activeClasses =
     "bg-white text-black dark:bg-white dark:text-black font-medium";
 
-  // Define items inside the component so 't' works
   const navItems = [
     { name: t("sidebar.dashboard"), href: "/dashboard", icon: LayoutDashboard },
     { name: t("sidebar.schedule"), href: "/schedule", icon: Calendar },
@@ -39,7 +37,7 @@ export function SidebarContent() {
       <nav className="flex flex-col space-y-2 flex-1">
         {navItems.map((item) => (
           <NavLink
-            key={item.href} // Use href as key since name changes with language
+            key={item.href}
             to={item.href}
             end={item.href === "/dashboard"}
             className={({ isActive }) =>

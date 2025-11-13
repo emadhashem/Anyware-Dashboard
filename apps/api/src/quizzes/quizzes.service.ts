@@ -25,7 +25,7 @@ export class QuizzesService {
     const [quizzes, totalCount] = await Promise.all([
       this.quizModel
         .find()
-        .sort({ dueDate: 1 }) // Show closest due date first
+        .sort({ dueDate: 1 })
         .skip(skip)
         .limit(limit)
         .exec(),

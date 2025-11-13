@@ -13,10 +13,10 @@ import { useGetAllQuizzes } from "@/api/quizzes/quizzes.hooks";
 import QuizSkeleton from "@/components/app/quizzes/QuizSkeleton";
 import QuizCard from "@/components/app/quizzes/QuizCard";
 import CustomPagination from "@/components/app/CustomPagination";
-import { useTranslation } from "react-i18next"; // Import hook
+import { useTranslation } from "react-i18next";
 
 export default function QuizzesPage() {
-  const { t } = useTranslation(); // Initialize hook
+  const { t } = useTranslation();
   const [page, setPage] = useState(1);
   const { data, isPending } = useGetAllQuizzes(page, 9);
   const quizzes = data?.data || [];

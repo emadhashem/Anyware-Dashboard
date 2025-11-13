@@ -19,7 +19,6 @@ export default function CustomPagination({
   page,
   totalPages,
 }: TProps) {
-//   if (totalPages === 1) return null;
   return (
     <Pagination>
       <PaginationContent>

@@ -12,7 +12,6 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 bg-card shadow-sm border-b border-border px-4 md:px-6 lg:px-8 py-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        {/* Mobile Menu Trigger */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="md:hidden shrink-0">
@@ -29,7 +28,6 @@ export default function Header() {
         </Sheet>
 
         <h1 className="text-xl font-semibold hidden md:block text-foreground">
-          {/* Interpolation Example */}
           {t("header.welcome", { name: "Talia" })}
         </h1>
       </div>
